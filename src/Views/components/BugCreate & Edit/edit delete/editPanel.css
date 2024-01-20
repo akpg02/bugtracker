@@ -1,0 +1,18 @@
+.edit-panel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 1.3rem;
+}
+
+.edit-panel button {
+  font-size: 1.8rem;
+  text-align: left;
+  color: var(--red);
+  background: none;
+  margin: 1rem;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}

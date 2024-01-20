@@ -1,0 +1,87 @@
+.left-panel {
+  position: relative;
+  width: 20%;
+  height: 100vh;
+  background-color: var(--tertiary-color);
+  border: 1px solid var(--tertiary-color);
+}
+
+.left-panel.show {
+  display: block;
+}
+
+.left-panel .nav-link h1 {
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 2.8rem;
+  font-family: "Dancing Script", cursive;
+}
+
+.left-panel ul {
+  margin: 10rem 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.left-panel ul li {
+  padding: 10px;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.left-panel ul li a {
+  padding-bottom: 20px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.container .arrow span {
+  position: absolute;
+  right: 2rem;
+}
+
+.left-panel span.chevron {
+  color: var(--white);
+  position: absolute;
+  font-size: 3.3rem;
+  cursor: pointer;
+  right: 10px;
+}
+
+.left-panel span.chevron.show {
+  display: block;
+}
+
+.left-panel button {
+  position: absolute;
+  padding: 2rem 5rem;
+  background-color: var(--red);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 700px) {
+  .container .arrow span {
+    font-size: 3.3rem;
+    display: block;
+  }
+
+  .left-panel {
+    display: none;
+    position: absolute;
+    opacity: 1;
+  }
+
+  .left-panel.show {
+    display: block;
+  }
+
+  .left-panel span.chevron {
+    display: block;
+  }
+}

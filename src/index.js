@@ -1,13 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import logger from "redux-logger";
+import { thunk } from "redux-thunk";
+import { Provider } from "react-redux";
+import { combineReducers, configureStore, Tuple } from "@reduxjs/toolkit";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// Reducers
+import authReducer from "./Controllers/Redux/authSlice";
+import bugReducer from "./Controllers/Redux/bugSlice";
+import userReducer from "./Controllers/Redux/userSlice";
+
+// Redux configure
+const reducer = combineReducers({
+  auth: authReducer,
+  bugs: bugReducer,
+  user: userReducer,
+});
+
+const store = configureStore({
+  reducer,
+  middleware: () => new Tuple(thunk, logger),
+});
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 

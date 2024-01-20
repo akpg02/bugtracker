@@ -1,0 +1,26 @@
+.view-section {
+  width: 45%;
+  text-align: center;
+  background-color: #f2f2f2;
+  margin: 0.8rem;
+  padding: 0.8rem;
+  border-radius: 1rem;
+}
+
+.view-section h2.title {
+  margin: 0 0 15px 0;
+  border-bottom: 1px groove #000;
+  color: var(--secondary-color);
+}
+
+.view-section p.info {
+  font-size: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+@media screen and (max-width: 400px) {
+  .view-section {
+    width: 100vw;
+    padding: 0;
+  }
+}

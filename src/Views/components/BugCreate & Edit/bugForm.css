@@ -1,0 +1,79 @@
+.bugForm-container {
+  position: absolute;
+  top: 40%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.bug-create {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.bug-create .edit-close {
+  background-color: var(--tertiary-color);
+}
+
+.bug-create .edit-close span {
+  text-align: right;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  color: var(--red);
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.bug-create h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  border-bottom: 0.1rem groove var(--tertiary-color);
+  letter-spacing: 0.1rem;
+  padding: 1rem 0;
+  font-family: "Dancing Script", cursive;
+  background-color: var(--tertiary-color);
+}
+
+.bug-create form {
+  display: grid;
+  grid-template-columns: [labels] auto [controls] 1fr;
+  grid-auto-flow: row;
+  grid-gap: 0.8rem;
+  background: var(--offwhite);
+  padding: 1.2rem 1.8rem;
+  align-items: center;
+  border-radius: 0.2rem;
+}
+
+.bug-create form > label {
+  grid-column: labels;
+  grid-row: auto;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.bug-create form > input,
+.bug-create form > textarea,
+.bug-create form > select,
+.bug-create form > button {
+  grid-column: controls;
+  grid-row: auto;
+  border: none;
+  padding: 1rem;
+}
+
+.bug-create form > textarea {
+  resize: none;
+}
+
+.bug-create form > button {
+  background: var(--red);
+}
+
+@media screen and (max-width: 850px) {
+  .bug-create {
+    width: 75vw;
+  }
+}
